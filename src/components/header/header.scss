@@ -1,0 +1,190 @@
+
+// Слити для header
+
+.header {
+    display: flex;
+    // justify-content: space-between;
+    width: 100vw;
+    height: 120px;
+    position: fixed;
+    opacity: 0;
+    left: 0;
+    z-index: 10;
+    transition: opacity 1s ease-in-out; 
+    z-index: $zIndexForward-3;
+}
+
+
+
+
+// LOGO
+
+.logo-conteiner {
+    margin-left: floatingSize(236, vw);
+    margin-right: auto;
+}
+
+@media (max-width: 670px) {
+    .logo-conteiner {
+        margin-left: 0;
+    }
+}
+
+.logo {
+    width: 240px;
+    height: 120px;
+    background: $color-3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+
+
+
+// Ссылка на личный кабинет
+
+.header-link {
+    display: flex;
+    align-items: center;
+    margin: 0 floatingSize(50, vw);
+    position: relative;
+    transition: all 1s ease-in-out;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.header-link__text {
+    text-decoration: none;
+    @include fluidFontSize(16px, 18px, 480, 1920);
+    color: $color-white;
+    font-family: "ProximaNova";
+    font-weight: 700;
+}
+
+.header-link__text::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: $color-white;
+    bottom: 40%;
+    left: 0;
+    transition: width 0.4s cubic-bezier(.49,.79,.54,.86);
+    
+}
+
+.header-link__text::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    background-color: $color-white;
+    bottom: 40%;
+    right: 0;
+    transition: width 0.4s cubic-bezier(.49,.79,.54,.86);
+}
+
+.header-link:hover 
+.header-link__text::before {
+    width: 100px;
+}
+
+.header-link:hover 
+.header-link__text::after {
+    width: 100px;
+}
+
+
+.header-link__active {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+
+
+// Кнопка бургер
+
+.burger-bottom {
+    width: 120px; 
+    height: 120px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $color-black;
+    appearance: none;
+    border: 0;
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.burger-bottom:focus {
+    outline: none;
+}
+
+.burger {
+    width: 32px;
+    height: 24px;
+    position: relative;
+
+    .burger__line {
+        display: block;
+        position: absolute;
+        width: 32px;
+        height: 2px;
+        background: $color-white;
+        transition: all 350ms ease-in-out;
+    }
+
+    .burger__line:nth-child(1) {
+        top: 0;
+        
+    }
+
+    .burger__line:nth-child(2) {
+        top: 50%;
+        opacity: 1;
+        transition: all 200ms ease-in-out;
+    }
+
+    .burger__line:nth-child(3) {
+        top: 100%;
+    }
+}
+
+.burger-bottom:hover {
+
+    .burger__line:nth-child(1) {
+        top: 50%;
+    }
+
+    .burger__line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger__line:nth-child(3) {
+        top: 50%;
+    }
+}
+
+.burger_active {
+
+    .burger__line:nth-child(1) {
+        transform: rotate(45deg );
+        top: 50%;
+    }
+
+    .burger__line:nth-child(2) {
+        display: none;
+    }
+
+    .burger__line:nth-child(3) {
+        transform: rotate(-45deg); 
+        top: 50%;
+    }
+}
