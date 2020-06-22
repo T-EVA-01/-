@@ -8,7 +8,7 @@
     height: floatingSize(1080, vw);
     position: relative;
     padding-top: floatingSize(280, vw);
-    overflow-x: hidden;
+    overflow: hidden;
 
     .annotation__background-img {
         width: 100vw;
@@ -19,6 +19,15 @@
         left: 0;
         right: 0;
         z-index: -1;
+        opacity: 0;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+        transition: opacity 2s ease-in-out, transform 10s linear;
+        object-fit: cover;
+    }
+
+
+    .annotation__background-img-active {
+        transform: matrix(1.2, 0, 0, 1.2, 0, 0)
     }
 
     .annotation-text {
