@@ -9,6 +9,7 @@ const MenuLinks = document.querySelector('.menu__links');
 const headerLink = document.querySelector('.header-link');
 const windowMenuFooter = document.querySelector('.menu-footer')
 const windowMenu = document.querySelector('.window-menu');
+const menu = document.querySelector('.menu'); 
 
 // Плавное появление header при загрузке страницы
 
@@ -42,6 +43,7 @@ burger.addEventListener('click', () => {
   if (counter === 0) {
 
     windowMenu.classList.add('window-menu_active-positionY1');
+    menu.style.zIndex = "500";
     
 
     setTimeout(function() {
@@ -83,7 +85,8 @@ burger.addEventListener('click', () => {
       MenuLinks.classList.remove('menu__links-active-color');
 
       burger.removeAttribute("disabled"); // разблокирует кнопку
-        
+      
+      menu.style.zIndex = "";
     }, 2300)
 
     counter--;
