@@ -10,8 +10,9 @@
     opacity: 0;
     left: 0;
     z-index: 10;
-    transition: opacity 1s ease-in-out; 
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
     z-index: $zIndexForward-6;
+    transform: translateY(-100%);
 }
 
 

@@ -13,11 +13,12 @@ const menu = document.querySelector('.menu');
 
 // Плавное появление header при загрузке страницы
 
-function headerVisible() {
-    header.style.opacity = "1";
-}
+setTimeout(function() {
+  header.style.opacity = "1";
+  header.style.transform = "translateY(0)"
+}, 1000)
 
-headerVisible();
+
 
 
 // Функция развертки бургера при загрузке страницы
@@ -28,7 +29,7 @@ function removeAttr() {
     }
 }
 
-setTimeout(removeAttr, 1000)
+setTimeout(removeAttr, 2200)
 
 
 // События и функции, связанные с кнопкой burger

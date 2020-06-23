@@ -26,8 +26,12 @@
     }
 
 
-    .annotation__background-img-active {
-        transform: matrix(1.2, 0, 0, 1.2, 0, 0)
+    .annotation__background-img-active-transmorm {
+        transform: matrix(1.1, 0, 0, 1.1, 0, 0)
+    }
+
+    .annotation__background-img-active-opasity {
+        opacity: 1;
     }
 
     .annotation-text {
@@ -41,6 +45,8 @@
             text-transform: uppercase;
             line-height: 125%;
             margin-bottom: floatingSize(45, vw);
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
         }
 
         .annotation-text__header {
@@ -48,7 +54,31 @@
             @include fluidFontSize(40px, 80px, 480, 1920);
             font-weight: 800;
             overflow: hidden;
+
+            .annotation-text__header-line {
+                transform: translateX(-100%);
+                transition: transform 1.5s ease-in-out;
+            }
+
+            .annotation-text__header-line-active {
+                animation: animaTextHeader 1.8s ease-in-out;
+                animation-fill-mode: forwards;
+            }
         }
+    }
+}
+
+@keyframes animaTextHeader {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    70% {
+        transform: translateX(5%);
+    }
+
+    100% {
+        transform: translateX(0);
     }
 }
 
@@ -104,6 +134,9 @@
     padding: 0 5em;
     position: absolute;
     bottom: 0;
+    opacity: 0;
+    transform: translateY(-10%);
+    transition: all 1s ease-in-out;
 
     .discription__item {
         color: $color-white;
@@ -132,6 +165,11 @@
         top: 0;
         transition: all 0.5s ease-in-out;
     }
+}
+
+.discription-active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .discription__item:hover {
@@ -185,3 +223,67 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+// Блок FDP
+
+.FDP-pioner-wrapper {
+    background: $color-5;   
+}
+
+.FDP-conteiner {
+    padding: floatingSize(70, vw) floatingSize(160, vw);
+    overflow: hidden;
+}
+
+.FDP-pioner {
+    min-height: floatingSize(400, vw);
+    padding: floatingSize(70, vw) floatingSize(240, vw) floatingSize(110, vw);
+    font-family: 'ProximaNova';
+    color: $color-black;
+    background: $color-white;
+    transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+
+    opacity: 0;
+    transform: matrix(1, 0, 0, 1, 0, 144.73);
+
+    .FDP-pioner__text-conpany {
+        font-size: 12px;
+        font-weight: 700;
+        color: $color-4;
+        text-transform: uppercase;
+        line-height: 115%;
+        margin-bottom: 20px;
+    }
+
+    .FDP-pioner__header {
+        @include fluidFontSize(35px, 60px, 480, 1920);
+        font-weight: 800;
+        line-height: 115%;
+        margin-bottom: 20px;
+    }
+
+    .FDP-pioner__text  {
+        font-family: 'HouschkaPro';
+        font-weight: 300;
+        @include fluidFontSize(18px, 22px, 480, 1920);
+        line-height: 115%;
+        color: $color-6;
+    }
+}
+
+
+
+
+
+.active {
+    opacity: 1;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+} 

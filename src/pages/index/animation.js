@@ -1,24 +1,73 @@
 const annotationBackgroundImg = document.querySelectorAll('.annotation__background-img');
+const annotationTextGeaderLine = document.querySelectorAll('.annotation-text__header-line');
+const annotationTextConpany = document.querySelector('.annotation-text__text-conpany');
+const discription = document.querySelector('.discription');
 
-annotationBackgroundImg[2].style.opacity = "1"; 
-// annotationBackgroundImg[2].classList.add('annotation__background-img-active');
+annotationBackgroundImg[0].classList.add('annotation__background-img-active-opasity');
+
+setTimeout(function() {
+    discription.classList.add('discription-active');
+    annotationTextConpany.style.opacity = "1";
+}, 1000)
+
+setTimeout(function() {
+    annotationTextGeaderLine[0].classList.add('annotation-text__header-line-active');
+}, 2300)
+
+setTimeout(function() {
+    annotationTextGeaderLine[1].classList.add('annotation-text__header-line-active');
+}, 2500)
 
 
-
-
-
-function AnimaBackground() {
-    let i = 0;
-    for ( i; i < annotationBackgroundImg.length; i++) {
-        annotationBackgroundImg[i].style.opacity = "1";
-        annotationBackgroundImg[i].classList.add('annotation__background-img-active');
-
+setTimeout(function(){
+    annotationBackgroundImg[0].classList.add('annotation__background-img-active-transmorm');
+    setTimeout(function() {
+        annotationBackgroundImg[0].classList.remove('annotation__background-img-active-opasity')
+        annotationBackgroundImg[1].classList.add('annotation__background-img-active-transmorm');
+        annotationBackgroundImg[1].classList.add('annotation__background-img-active-opasity');
         setTimeout(function() {
-            annotationBackgroundImg[i].style.opacity = '0';
-        }, 10000)
+            annotationBackgroundImg[1].classList.remove('annotation__background-img-active-opasity')
+            annotationBackgroundImg[2].classList.add('annotation__background-img-active-transmorm');
+            annotationBackgroundImg[2].classList.add('annotation__background-img-active-opasity');
+            setTimeout(function() {
+                annotationBackgroundImg[0].classList.remove('annotation__background-img-active-transmorm')
+                annotationBackgroundImg[1].classList.remove('annotation__background-img-active-transmorm');
+                annotationBackgroundImg[2].style.transform = 'matrix(1, 0, 0, 1, 0, 0)';
+            }, 10100)
+        }, 8000)
+    }, 8000)
+}, 3800)
+
+
+
+
+// Анимация при прокрутке страницы
+let elements = document.querySelectorAll('[data-anima]');
+
+
+function isVisible(clientHeight) {
+    
+    for(let i = 0; i < elements.length; i++) {
         
+        let elem = elements[i].getBoundingClientRect();        
+        console.log(elem.top)
+        console.log(clientHeight)
+        if (elem.top > 0 && elem.top < clientHeight) {
+            switch (+(elements[i].dataset.anima)) {
+                case 1:
+                    elements[i].classList.add('active')
+            }
+        }
     }
+
+
 }
 
+// isVisible(clientHeight)
 
-AnimaBackground();
+
+window.addEventListener('scroll', () => {
+    let clientHeight = document.documentElement.clientHeight;
+
+    isVisible(clientHeight)
+})
