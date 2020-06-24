@@ -1,6 +1,7 @@
 @import "../../components/header/header.scss";
 @import "../../components/window-menu/window-menu.scss";
-
+@import "../../components/arrow-link/arrow-link.scss";
+@import "../../components/footer/footer.scss";
 
 
 
@@ -245,7 +246,7 @@
 
 .FDP-pioner {
     min-height: floatingSize(400, vw);
-    padding: floatingSize(70, vw) floatingSize(240, vw) floatingSize(110, vw);
+    padding: floatingSize(70, vw) floatingSize(320, vw) floatingSize(110, vw);
     font-family: 'ProximaNova';
     color: $color-black;
     background: $color-white;
@@ -283,7 +284,230 @@
 
 
 
-.active {
-    opacity: 1;
-    transform: matrix(1, 0, 0, 1, 0, 0);
+.FDP-pioner-active {
+    animation: FDPpionerAnima 1.8s ease-in-out;
+    animation-fill-mode: forwards;
 } 
+
+@keyframes FDPpionerAnima {
+    0% {
+        opacity: 0;
+        transform: matrix(1, 0, 0, 1, 0, 144.73);
+    }
+
+    70% {  
+        transform: matrix(1, 0, 0, 1, 0, -30);
+    }
+
+    100% {
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+}
+
+
+
+
+// Блок three-actions
+
+.block-header {
+    font-family: 'ProximaNova';
+    font-weight: 800;
+    @include fluidFontSize(22px, 28px, 480, 1920);
+    color: $color-black;
+    line-height: 115%;
+}
+
+.three-actions {
+    padding: 0 floatingSize(320, vw);
+    margin-bottom: floatingSize(120, vw);
+
+    .block-header {
+        padding: floatingSize(48, vw) 0 floatingSize(48, vw) floatingSize(160, vw);
+    }
+}
+
+
+.three-actions__actions {
+    display: flex;
+
+    .action-conteiner {
+        position: relative;
+        width: floatingSize(400, vw);
+        height: floatingSize(320, vw);
+        border: 2px solid $color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .action-conteiner:nth-child(2) {
+        margin: 0 40px;
+    }
+
+
+    .action {
+        display: inline-block;
+        font-family: 'ProximaNova';
+        font-weight: 800;
+        @include fluidFontSize(200px, 250px, 480, 1920);
+        color: $color-white;
+    }
+
+    .action__text {
+        text-align: center;
+        position: absolute;
+        color: $color-6;
+        font-weight: 300;
+        @include fluidFontSize(18px, 28px, 480, 1920);
+
+        span {
+            font-weight: 800;
+        }
+    }
+}
+
+
+.three-actions-footer {
+    display: flex;
+    padding-left: floatingSize(160, vw);
+    margin-top: floatingSize(60, vw);
+
+    button.three-actions-button {
+        font-size: 12px;
+        width: 13.33em;
+        height: 4.67em;
+        background: $color-3;
+        color: $color-white;
+        text-transform: uppercase;
+        appearance: none;
+        border: 0;
+        border-radius: 0;
+        cursor: pointer;
+        font-family: 'ProximaNova';
+        font-weight: 300;
+    }
+
+    .three-actions-footer__text {
+        margin-left: 30px;
+        font-family: 'HouschkaPro';
+        font-weight: 300;
+        color: $color-6;
+        line-height: 150%;
+
+        span {
+            font-family: 'ProximaNova';
+            font-weight: 700;
+            @include fluidFontSize(22px, 28px, 480, 1920);
+            
+        }
+        
+    }
+}
+
+
+
+
+// Блок business-development
+
+.business-development-conteiner {
+    display: flex;
+    justify-content: center;
+}
+
+.business-development {
+    
+    .business-development__top {
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: floatingSize(60, vw);
+
+        .block-header {
+            margin-right: floatingSize(110, vw);
+        }
+
+        .business-development__text {
+            font-family: 'HouschkaPro';
+            font-weight: 600;
+            color: $color-6;
+            @include fluidFontSize(18px, 22px, 480, 1920);
+        }
+    }
+}
+
+.business-development__cards {
+    display: flex;
+
+    .card:nth-child(2) {
+        margin: 0 24px;
+    }
+}
+
+.card {
+    width: floatingSize(350, vw);
+    height: floatingSize(320, vw);
+    background: $color-4;
+    padding: floatingSize(32, vw) floatingSize(38, vw);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .card__text {
+        font-family: 'ProximaNova';
+        @include fluidFontSize(14px, 18px, 480, 1920);
+        color: $color-white;
+        line-height: 115%;
+    }
+
+    .card__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @include colorArrowLink($color-white)
+    }
+}
+
+
+// Блок Information
+
+.information-conteiner {
+    padding: floatingSize(120, vw) floatingSize(320, vw);
+}
+
+.information {
+    padding: floatingSize(70, vw) floatingSize(160, vw) floatingSize(100, vw);
+    background: $color-white;
+    display: flex;
+
+    .information__header {
+        margin-right: 70px;
+        min-width: floatingSize(320, vw);
+    }
+
+    .information__text {
+        @include fluidFontSize(16px, 22px, 480, 1920);
+        font-family: 'HouschkaPro';
+        font-weight: 300;
+        color: $color-6;
+        margin-bottom: 40px;
+        span {  
+            font-weight: 700;
+        }
+    }
+
+    .three-actions-button {
+        font-size: 12px;
+        width: 11.666em;
+        height: 4.67em;
+        color: $color-black;
+        background: $color-white;
+        text-transform: uppercase;
+        appearance: none;
+        border: 1px solid $color-black;
+        border-radius: 0;
+        cursor: pointer;
+        font-family: 'ProximaNova';
+        font-weight: 300;
+    }
+}

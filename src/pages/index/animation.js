@@ -55,15 +55,12 @@ function isVisible(clientHeight) {
         if (elem.top > 0 && elem.top < clientHeight) {
             switch (+(elements[i].dataset.anima)) {
                 case 1:
-                    elements[i].classList.add('active')
+                    elements[i].classList.add('FDP-pioner-active')
             }
         }
     }
-
-
 }
 
-// isVisible(clientHeight)
 
 
 window.addEventListener('scroll', () => {

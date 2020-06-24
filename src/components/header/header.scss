@@ -111,7 +111,7 @@
 
 // Кнопка бургер
 
-.burger-bottom {
+.burger-button {
     width: 120px; 
     height: 120px; 
     display: flex;
@@ -124,7 +124,7 @@
     cursor: pointer;
 }
 
-.burger-bottom:focus {
+.burger-button:focus {
     outline: none;
 }
 
@@ -158,7 +158,7 @@
     }
 }
 
-.burger-bottom:hover {
+.burger-button:hover {
 
     .burger__line:nth-child(1) {
         top: 50%;

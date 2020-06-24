@@ -2,7 +2,7 @@
 // Переменные
 
 const header = document.querySelector('.header');
-const burger = document.querySelector('.burger-bottom')
+const burger = document.querySelector('.burger-button')
 const burgerLine = document.querySelectorAll('.burger__line');
 const logo = document.querySelector('.logo');
 const MenuLinks = document.querySelector('.menu__links');

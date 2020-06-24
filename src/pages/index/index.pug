@@ -1,4 +1,5 @@
 extends ../../layout/layout.pug
+include ../../components/arrow-link/arrow-link.pug
 
 block content
 
@@ -22,6 +23,7 @@ block content
                 .discription__text Сервис
 
     .FDP-pioner-wrapper
+
         .FDP-conteiner
             .FDP-pioner(data-anima="1")
                 .FDP-pioner__text-conpany ОФД пионер
@@ -30,5 +32,62 @@ block content
                     | Сервис ОФД Пионер - это гарантия надежности, современнности и безупречного сервиса.  
                     | Мы берем на себя все организационные вопросы по подключению и дальнейшему 
                     | взаимодействию.
-           
+
+        .three-actions
+            .block-header Вам нужно выполнить только три простых шага
+            .three-actions__actions
+                .action-conteiner
+                    .action 01
+                    .action__text 
+                        | <span>Зарегестрируйтесь</span><br>
+                        | в личном кбинете
+                .action-conteiner
+                    .action 02
+                    .action__text 
+                        | <span>Заключите договор</span><br>
+                        | с ОФД Пионер  
+                .action-conteiner
+                    .action 03
+                    .action__text 
+                        | <span>Используйте</span><br>
+                        | новые возможности
+            .three-actions-footer            
+                button.three-actions-button Подключить
+                .three-actions-footer__text
+                    | Стоимость в год за 1 кассу <br> <span>3000 руб.</span>
+        
+        .business-development-conteiner
+            .business-development
+                .business-development__top
+                    .block-header Развивайте бизнес
+                    .business-development__text С новыми online-возможностями ОФД
+                .business-development__cards
+                    .card
+                        .card__text Пердача электронной отчетности в ФНС
+                        .card__bottom
+                            +arrow-link('card-link', 'Подробнее', '#')
+                            .card-img
+                                img(src="./icons/Shape1.png", alt="")
+                    .card
+                        .card__text Регистрация кассовых аппаратов
+                        .card__bottom
+                            +arrow-link('card-link', 'Подробнее', '#')  
+                            .card-img
+                                img(src="./icons/Shape2.png", alt="")   
+                    .card
+                        .card__text Аналитика торговых точек
+                        .card__bottom
+                            +arrow-link('card-link', 'Подробнее', '#')
+                            .card-img
+                                img(src="./icons/Shape3.png", alt="")
+                
+        .information-conteiner
+            .information
+                .block-header(class = "information__header") Квалифицированная электронная подпись
+                .information__general-position
+                    .information__text
+                        | <span>Пионер является сертифицированным удостоверяющим центром</span>
+                        | У нас вы можете приобрести КЭП для ФНС и ОФД,
+                        | а также электронную подпись любого назначения
+                    button.three-actions-button Купить КЭП
 

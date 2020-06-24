@@ -12,4 +12,17 @@
 }
 
 
+// Миксин задаёт цвет ссылки-стрелки 
+
+@mixin colorArrowLink($color) {
+    .arrow-link__arrow {
+      background: $color;
+    }
+
+    .arrow-link__arrow::after,
+    .arrow-link__arrow::before {
+      background: $color;
+    }
+}
+
 

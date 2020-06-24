@@ -1,0 +1,55 @@
+.arrow-link {
+    font-family: 'ProximaNova';
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    .arrow-link__arrow {
+        width: 0px;
+        height: 1px;
+        position: relative;
+        transition: width 0.4s ease-in-out, color 0.4s ease-in-out;
+    }
+
+    .arrow-link__arrow::after,
+    .arrow-link__arrow::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 0px;
+        transition: width 0.2s ease-in-out, color 0.4s ease-in-out;
+        
+
+    }
+
+    .arrow-link__arrow::after {
+        transform: rotate(45deg);
+        top: -3;
+        right: 0;
+    }
+
+    .arrow-link__arrow::before {
+        transform: rotate(-45deg);
+        top: 3;
+        right: 0;
+    }
+
+    .arrow-link__text {
+        margin-left: 15px;
+        transition: color 0.4s ease-in-out;
+    }
+}
+
+.arrow-link:hover {
+
+    .arrow-link__arrow {
+        width: 20px;
+    }
+
+    .arrow-link__arrow::after,
+    .arrow-link__arrow::before {
+        width: 6px;
+    }
+}

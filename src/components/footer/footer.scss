@@ -1,0 +1,89 @@
+.footer {
+    padding: floatingSize(60, vw) floatingSize(480, vw);
+    display: flex;
+
+    .footer-column:not(:last-child) {
+        width: floatingSize(360, vw);
+    }
+}
+
+.footer-contact {
+    margin-bottom: floatingSize(60, vw);   
+    font-family: 'ProximaNova';
+
+    .footer-contact__text {
+        @include fluidFontSize(10px, 12px, 480, 1920);
+        font-weight: 700;
+        color: $color-4;
+        text-transform: uppercase;
+        margin-bottom: floatingSize(30, vw);
+    }
+
+    .footer-contact__namber {
+        font-weight: 800;
+        color: $color-black;
+        @include fluidFontSize(18px, 22px, 480, 1920);
+
+    }
+}
+
+.footer-links {
+    
+    .footer-link:not(:last-child) {
+        margin-bottom: floatingSize(30, vw);
+    }
+
+    .footer-link {
+        font-weight: 500;
+        @include colorArrowLink($color-black);
+        transform: translateX(-15px);
+    }
+
+    .footer-link:hover {
+
+        .arrow-link__arrow {
+            color: $color-4;
+        }
+    
+        .arrow-link__arrow::after,
+        .arrow-link__arrow::before {
+            color: $color-4;
+        }
+    
+        .arrow-link__text {
+            color: $color-4;
+        }
+    }
+}
+
+.footer-contact {
+
+    .footer-contact__email {
+        @include fluidFontSize(10px, 12px, 480, 1920);
+        font-weight: 700;
+        font-family: 'ProximaNova';
+        color: $color-black;
+        text-transform: uppercase;
+        line-height: 150%;
+    }
+
+
+}
+
+.footer-companies {
+    transform: translateY(-10px);
+    @include fluidFontSize(10px, 12px, 480, 1920);
+    font-weight: 300;
+    font-family: 'ProximaNova';
+    color: $color-6;
+    text-transform: uppercase;
+
+    a {
+        color: $color-6;
+        text-decoration: none;
+        span {
+            font-weight: 700;
+        }
+    }
+
+}
