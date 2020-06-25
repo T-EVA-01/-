@@ -5,10 +5,10 @@ const header = document.querySelector('.header');
 const burger = document.querySelector('.burger-button')
 const burgerLine = document.querySelectorAll('.burger__line');
 const logo = document.querySelector('.logo');
-const MenuLinks = document.querySelector('.menu__links');
+const MenuLinks = document.querySelector('.menu-links');
 const headerLink = document.querySelector('.header-link');
 const windowMenuFooter = document.querySelector('.menu-footer')
-const windowMenu = document.querySelector('.window-menu');
+const windowMenu = document.querySelector('.windows-menu');
 const menu = document.querySelector('.menu'); 
 
 // Плавное появление header при загрузке страницы
@@ -43,12 +43,12 @@ burger.addEventListener('click', () => {
 
   if (counter === 0) {
 
-    windowMenu.classList.add('window-menu_active-positionY1');
+    windowMenu.classList.add('windows-menu_active-positionY1');
     menu.style.zIndex = "500";
     
 
     setTimeout(function() {
-      MenuLinks.classList.add('menu__links-active');
+      MenuLinks.classList.add('menu-links-active');
     }, 150)
 
     setTimeout(function() {
@@ -64,13 +64,13 @@ burger.addEventListener('click', () => {
 
     headerLink.classList.toggle('header-link__active');
     windowMenuFooter.classList.toggle('menu-footer_active'); // Меняет цвет текста ссылок меню
-    MenuLinks.classList.toggle('menu__links-active-color');    
-    windowMenu.classList.add('window-menu_active-positionY2');
-    windowMenu.classList.add('window-menu_active-positionXY');
+    MenuLinks.classList.toggle('menu-links-active-color');    
+    windowMenu.classList.add('windows-menu_active-positionY2');
+    windowMenu.classList.add('windows-menu_active-positionXY');
       
     // Замедляет изчезновение текста
     setTimeout(function() {
-      MenuLinks.classList.remove('menu__links-active');
+      MenuLinks.classList.remove('menu-links-active');
     }, 300)
 
 
@@ -80,10 +80,10 @@ burger.addEventListener('click', () => {
 
       // Удаляет актывные классы, чтобы вернуть блок в начальное положение до первого нажатия
 
-      windowMenu.classList.remove('window-menu_active-positionY1');
-      windowMenu.classList.remove('window-menu_active-positionY2');
-      windowMenu.classList.remove('window-menu_active-positionXY');
-      MenuLinks.classList.remove('menu__links-active-color');
+      windowMenu.classList.remove('windows-menu_active-positionY1');
+      windowMenu.classList.remove('windows-menu_active-positionY2');
+      windowMenu.classList.remove('windows-menu_active-positionXY');
+      MenuLinks.classList.remove('menu-links-active-color');
 
       burger.removeAttribute("disabled"); // разблокирует кнопку
       

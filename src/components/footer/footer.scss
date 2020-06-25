@@ -11,17 +11,11 @@
         padding: floatingSize(60, vw) floatingSize(300, vw);
     }
 
-
-
-    .footer-column:not(:last-child) {
-        width: floatingSize(360, vw);
-    }
-
     @media (max-width: 700px) {
         flex-direction: column;
         align-items: center;
         padding: floatingSize(60, vw) floatingSize(300, vw);
-
+    
         .footer-column:nth-child(1),
         .footer-column:nth-child(2),
         .footer-column:nth-child(3) {
@@ -29,18 +23,18 @@
             justify-content: space-between;
             width: 100%;
         }
-
+    
         .footer-column:not(:last-child) {
             margin-bottom: 20px;
         }
-
+    
         .footer-column:nth-child(1) {
             .footer-links {
                 min-width: 200px;
                 transform: translateX(35px);
             }
         }
-
+    
         .footer-column:nth-child(2) {
             .footer-links {
                 transform: translateX(-45px);
@@ -52,13 +46,20 @@
     @media (max-width: 500px) {
         padding: floatingSize(60, vw) floatingSize(150, vw);
     }
+
 }
+
+.footer-column:not(:last-child) {
+    width: floatingSize(360, vw);
+}
+
+
 
 .footer-contact {
     margin-bottom: floatingSize(60, vw);   
     font-family: 'ProximaNova';
 
-    .footer-contact__text {
+    &__text {
         @include fluidFontSize(10px, 12px, 480, 1920);
         font-weight: 700;
         color: $color-4;
@@ -66,12 +67,13 @@
         margin-bottom: floatingSize(30, vw);
     }
 
-    .footer-contact__namber {
+    &__number {
         font-weight: 800;
         color: $color-black;
         @include fluidFontSize(18px, 22px, 480, 1920);
 
     }
+
 }
 
 .footer-links {
@@ -87,11 +89,12 @@
     }
 
     @include animaArrowLink($color-4);
+
 }
 
 .footer-contact {
 
-    .footer-contact__email {
+    &__email {
         @include fluidFontSize(10px, 12px, 480, 1920);
         font-weight: 700;
         font-family: 'ProximaNova';
@@ -99,7 +102,6 @@
         text-transform: uppercase;
         line-height: 150%;
     }
-
 
 }
 
@@ -113,15 +115,15 @@
 
     @media (max-width: 700px) {
         transform: translateY(0) translateX(-15px);
-        
     }
 
     a {
         color: $color-6;
         text-decoration: none;
+
         span {
             font-weight: 700;
         }
-    }
 
+    }
 }

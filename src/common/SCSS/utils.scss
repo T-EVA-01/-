@@ -1,0 +1,22 @@
+@mixin animaArrowLink($color) {
+
+    .arrow-link:hover {
+  
+      .arrow-link__arrow {
+        width: 20px;
+        background: $color;
+        margin-right: 15px;
+      }
+  
+      .arrow-link__arrow::after,
+      .arrow-link__arrow::before {
+        width: 6px;
+        background: $color;
+      }
+  
+      .arrow-link__text {
+        color: $color;
+        transform: translateX(0);
+      }
+    }
+  }

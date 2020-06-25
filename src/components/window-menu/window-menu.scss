@@ -7,7 +7,7 @@
     z-index: $zIndexForward-01;
 }
 
-.menu__links {
+.menu-links {
     position: absolute;
     top: floatingSize(270, vh);
     left: floatingSize(480, vw);
@@ -15,7 +15,7 @@
     visibility: hidden;
     transition: visibility 2s ease-in-out;
 
-    .menu__link {
+    &__link {
         text-decoration: none;
         @include fluidFontSize(35px, 60px, 480, 1920);
         line-height: 123%;
@@ -25,75 +25,81 @@
         display: block;
     }
 
-    .menu__link:nth-child(1) {
+    &__link:nth-child(1) {
         transform: translateY(30px);
         transition: color 0.25s ease-in-out, transform 0.4s ease-in-out 0.15s, opacity 0.5s ease-in-out 0.3s;  
         opacity: 0;
     }
-    .menu__link:nth-child(2) {
+
+    &__link:nth-child(2) {
         transform: translateY(30px);
         transition: color 0.25s ease-in-out, transform 0.45s ease-in-out 0.3s, opacity 0.5s ease-in-out 0.45s;  
         opacity: 0;  
     }
-    .menu__link:nth-child(3) {
+
+    &__link:nth-child(3) {
         transform: translateY(30px);  
         transition: color 0.25s ease-in-out, transform 0.5s ease-in-out 0.45s, opacity 0.5s ease-in-out 0.6s; 
         opacity: 0;
     }
-    .menu__link:nth-child(4) {
+
+    &__link:nth-child(4) {
         transform: translateY(30px);  
         transition: color 0.25s ease-in-out, transform 0.57s ease-in-out 0.6s, opacity 0.5s ease-in-out 0.75s;
         opacity: 0;   
     }
-    .menu__link:nth-child(5) {
+
+    &__link:nth-child(5) {
         transform: translateY(30px);  
         transition: color 0.25s ease-in-out, transform 0.65s ease-in-out 0.75s, opacity 0.55s ease-in-out 0.9s;  
         opacity: 0;
     }
-    .menu__link:nth-child(6) {
+
+    &__link:nth-child(6) {
         transform: translateY(30px);  
         transition: color 0.25s ease-in-out, transform 0.75s ease-in-out 0.9s, opacity 0.6s ease-in-out 1.05s; 
         opacity: 0; 
     }
-    .menu__link:nth-child(7) {
+
+    &__link:nth-child(7) {
         transform: translateY(30px); 
         transition: color 0.25s ease-in-out, transform 0.85s ease-in-out 1.05s, opacity 0.7s ease-in-out 1.2s;  
         opacity: 0;  
     }
 
-    .menu__link:hover {
+    &__link:hover {
         color: $color-3;
     }
+
 }    
 
-
 @media (max-width: 670px) {
-    .menu__links {
+
+    .menu-links {
         left: 15vw;
     }
+
 }
 
-.menu__links-active {
+.menu-links-active {
     visibility: visible;
-    #menu__link {
+
+    #menu-links__link {
         opacity: 1;
         transform: translateY(0);  
     }
+
 }
 
-.menu__links-active-color {
-    #menu__link {
+.menu-links-active-color {
+
+    #menu-links__link {
         color: $color-4;
     }
+
 }
 
-
-
-
-
-// Окно меню
-
-.window-menu {
+.windows-menu {
     position: fixed;
     display: flex;
     width: 100vw;
@@ -107,50 +113,40 @@
     transform: translateY(-100%);
     transition: transform 600ms ease-in-out, opacity 1s ease-in-out;
     z-index: $zIndexForward-1;
+
+    .windows-menu__window {
+        width: 50%;
+        height: 100%;
+        background: $color-black; 
+    
+    }
 }
 
-.window-menu__item {
-    width: 50%;
-    height: 100%;
-    background: $color-black; 
-
-}
-
-
-
-
-.window-menu_active-positionY1 {
+.windows-menu_active-positionY1 {
     transform: translateY(0);
     opacity: 1;
 }
 
-.window-menu_active-positionY2 {
+.windows-menu_active-positionY2 {
     animation: anima3 500ms ease-in-out 1;
     animation-fill-mode: forwards;
     animation-delay: 1800ms;
 }
 
 
-.window-menu_active-positionXY {
+.windows-menu_active-positionXY {
     
-    .window-menu__item:nth-child(1) {
+    .windows-menu__window:nth-child(1) {
         animation: anima1 1.2s ease-in-out 1;
         animation-fill-mode: forwards;
     }
 
-    .window-menu__item:nth-child(2) {
+    .windows-menu__window:nth-child(2) {
         animation: anima2 1.2s ease-in-out 1;
         animation-fill-mode: forwards;
     }
 
 }
-
-
-
-
-
-
-// ФУТЕР МЕНЮ
 
 .menu-footer {
     position: absolute;
@@ -180,11 +176,10 @@
         margin-left: floatingSize(615, vw);
     }
 
-    
-
     .menu-footer__item span {
         font-weight: bold;    
     }
+
 }
 
 .menu-footer_active {
@@ -199,17 +194,8 @@
             margin-left: 15vw;
         }
     }
+
 }
-
-
-
-
-
-
-
-
-
-//keyframes
 
 
 @keyframes anima1 {

@@ -1,21 +1,21 @@
 const annotationBackgroundImg = document.querySelectorAll('.annotation__background-img');
 const annotationTextGeaderLine = document.querySelectorAll('.annotation-text__header-line');
 const annotationTextConpany = document.querySelector('.annotation-text__text-conpany');
-const discription = document.querySelector('.discription');
+const services = document.querySelector('.services');
 
 annotationBackgroundImg[0].classList.add('annotation__background-img-active-opasity');
 
 setTimeout(function() {
-    discription.classList.add('discription-active');
+    services.classList.add('services-active');
     annotationTextConpany.style.opacity = "1";
 }, 1000)
 
 setTimeout(function() {
-    annotationTextGeaderLine[0].classList.add('annotation-text__header-line-active');
+    annotationTextGeaderLine[0].classList.add('header-line-active');
 }, 2300)
 
 setTimeout(function() {
-    annotationTextGeaderLine[1].classList.add('annotation-text__header-line-active');
+    annotationTextGeaderLine[1].classList.add('header-line-active');
 }, 2500)
 
 

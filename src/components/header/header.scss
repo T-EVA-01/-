@@ -1,11 +1,7 @@
 
-// Слити для header
-
 .header {
     display: flex;
-    // justify-content: space-between;
     width: 100vw;
-    // height: 120px;
     position: fixed;
     opacity: 0;
     left: 0;
@@ -13,26 +9,16 @@
     transition: opacity 1s ease-in-out, transform 1s ease-in-out; 
     z-index: $zIndexForward-6;
     transform: translateY(-100%);
-
 }
-
-
-
-
-// LOGO
 
 .logo-conteiner {
     margin-left: floatingSize(236, vw);
-    margin-right: auto;
+    margin-right: auto;  
 
-
-    
-}
-
-@media (max-width: 600px) {
-    .logo-conteiner {
+    @media (max-width: 600px) {
         margin-left: 0;
     }
+
 }
 
 .logo {
@@ -60,13 +46,8 @@
             transform: matrix(0.6, 0, 0, 0.6, 0, 0);
         }
     }
+
 }
-
-
-
-
-
-// Ссылка на личный кабинет
 
 .header-link {
     display: flex;
@@ -76,38 +57,40 @@
     transition: all 1s ease-in-out;
     visibility: hidden;
     opacity: 0;
+
+    &__text {
+        text-decoration: none;
+        @include fluidFontSize(16px, 18px, 480, 1920);
+        color: $color-white;
+        font-family: "ProximaNova";
+        font-weight: 700;
+    }
+
+    &__text::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: $color-white;
+        bottom: 40%;
+        left: 0;
+        transition: width 0.4s cubic-bezier(.49,.79,.54,.86);
+        
+    }
+
+    &__text::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        background-color: $color-white;
+        bottom: 40%;
+        right: 0;
+        transition: width 0.4s cubic-bezier(.49,.79,.54,.86);
+    }
+
 }
 
-.header-link__text {
-    text-decoration: none;
-    @include fluidFontSize(16px, 18px, 480, 1920);
-    color: $color-white;
-    font-family: "ProximaNova";
-    font-weight: 700;
-}
-
-.header-link__text::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    background-color: $color-white;
-    bottom: 40%;
-    left: 0;
-    transition: width 0.4s cubic-bezier(.49,.79,.54,.86);
-    
-}
-
-.header-link__text::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1px;
-    background-color: $color-white;
-    bottom: 40%;
-    right: 0;
-    transition: width 0.4s cubic-bezier(.49,.79,.54,.86);
-}
 
 .header-link:hover 
 .header-link__text::before {
@@ -118,19 +101,11 @@
 .header-link__text::after {
     width: 100px;
 }
-
 
 .header-link__active {
     visibility: visible;
     opacity: 1;
 }
-
-
-
-
-
-
-// Кнопка бургер
 
 .burger-button {
     width: 120px; 
@@ -157,6 +132,7 @@
             transform: matrix(0.6, 0, 0, 0.6, 0, 0);
         }
     }
+
 }
 
 .burger-button:focus {
@@ -169,12 +145,10 @@
     position: relative;
 
     @media (max-width: 600px) {
-
         transform: matrix(0.8, 0, 0, 0.8, 0, 0);
-
     }
 
-    .burger__line {
+    &__line {
         display: block;
         position: absolute;
         width: 32px;
@@ -183,18 +157,17 @@
         transition: all 350ms ease-in-out;
     }
 
-    .burger__line:nth-child(1) {
-        top: 0;
-        
+    &__line:nth-child(1) {
+        top: 0;  
     }
 
-    .burger__line:nth-child(2) {
+    &__line:nth-child(2) {
         top: 50%;
         opacity: 1;
         transition: all 200ms ease-in-out;
     }
 
-    .burger__line:nth-child(3) {
+    &__line:nth-child(3) {
         top: 100%;
     }
 }
@@ -212,6 +185,7 @@
     .burger__line:nth-child(3) {
         top: 50%;
     }
+
 }
 
 .burger_active {
@@ -229,4 +203,5 @@
         transform: rotate(-45deg); 
         top: 50%;
     }
+    
 }
