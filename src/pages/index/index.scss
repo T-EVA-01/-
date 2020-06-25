@@ -464,7 +464,8 @@
         justify-content: space-between;
         align-items: flex-end;
 
-        @include colorArrowLink($color-white)
+        @include colorArrowLink($color-white);
+        @include animaArrowLink($color-white);
     }
 }
 

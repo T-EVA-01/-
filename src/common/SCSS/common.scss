@@ -10,3 +10,19 @@
 
 
 @import "../../pages/index/index.scss";
+
+
+
+.only-digital {
+    text-transform: uppercase;      
+    text-decoration: none;
+    transition: color 0.35s ease-in-out;
+    @include fluidFontSize(10px, 12px, 480, 1920);
+    font-family: "ProximaNova";
+    font-weight: 300;
+    color: $color-4;
+}
+
+.only-digital:hover {
+    color: $color-4;
+}
