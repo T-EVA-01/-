@@ -246,7 +246,7 @@
 
 .FDP-pioner {
     min-height: floatingSize(400, vw);
-    padding: floatingSize(70, vw) floatingSize(320, vw) floatingSize(110, vw);
+    padding: floatingSize(70, vw) floatingSize(350, vw) floatingSize(100, vw) floatingSize(320, vw);
     font-family: 'ProximaNova';
     color: $color-black;
     background: $color-white;
@@ -256,12 +256,20 @@
     transform: matrix(1, 0, 0, 1, 0, 144.73);
 
     .FDP-pioner__text-conpany {
-        font-size: 12px;
+        @include fluidFontSize(10px, 12px, 480, 1920);
         font-weight: 700;
         color: $color-4;
         text-transform: uppercase;
         line-height: 115%;
         margin-bottom: 20px;
+    }
+
+    @media (max-width: 820px) {
+
+        .FDP-pioner__text-conpany {
+            margin-bottom: 10px;
+        }
+
     }
 
     .FDP-pioner__header {
@@ -271,16 +279,39 @@
         margin-bottom: 20px;
     }
 
+    @media (max-width: 820px) {
+        .FDP-pioner__header {
+            @include fluidFontSize(25px, 45px, 480, 1920);
+            margin-bottom: 10px;
+        }
+    }
+
     .FDP-pioner__text  {
         font-family: 'HouschkaPro';
         font-weight: 300;
         @include fluidFontSize(18px, 22px, 480, 1920);
         line-height: 115%;
         color: $color-6;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    @media (max-width: 820px) {
+        .FDP-pioner__text  {
+            @include fluidFontSize(14px, 16px, 480, 1920);
+        }
     }
 }
 
+@media (max-width: 820px) {
 
+    .FDP-pioner {
+        padding: floatingSize(150, vw) floatingSize(250, vw) floatingSize(150, vw);
+    }
+
+}
 
 
 
@@ -308,15 +339,10 @@
 
 
 
+
 // Блок three-actions
 
-.block-header {
-    font-family: 'ProximaNova';
-    font-weight: 800;
-    @include fluidFontSize(22px, 28px, 480, 1920);
-    color: $color-black;
-    line-height: 115%;
-}
+
 
 .three-actions {
     padding: 0 floatingSize(320, vw);
@@ -325,16 +351,37 @@
     .block-header {
         padding: floatingSize(48, vw) 0 floatingSize(48, vw) floatingSize(160, vw);
     }
+
+    @media (max-width: 1320px) {
+        padding: 0;
+        // text-align: center;
+    }
 }
 
+@media (max-width: 1500px) {
+
+    .three-actions {
+        padding: 0 floatingSize(200, vw);
+    }
+    
+}
+
+@media (max-width: 1020px) {
+
+    .three-actions {
+        padding: 0 floatingSize(100, vw);
+    }
+    
+}
 
 .three-actions__actions {
     display: flex;
 
+
     .action-conteiner {
         position: relative;
-        width: floatingSize(400, vw);
-        height: floatingSize(320, vw);
+        width: 400px;
+        height: 320px;
         border: 2px solid $color-white;
         display: flex;
         justify-content: center;
@@ -345,6 +392,12 @@
         margin: 0 40px;
     }
 
+    @media (max-width: 500px) {
+    
+        .action-conteiner:nth-child(2) {
+            margin: 0;
+        }
+    }
 
     .action {
         display: inline-block;
@@ -366,6 +419,34 @@
         }
     }
 }
+
+@media (max-width: 1200px) {
+    .three-actions__actions {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .action-conteiner:not(:last-child) {
+            margin-bottom: floatingSize(60, vw);
+
+        }
+
+        .action-conteiner {
+            width: 360px;
+            height: 280px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+
+    .action-conteiner {
+        width: 280px;
+        height: 200px;
+    }
+    
+}
+
+
 
 
 .three-actions-footer {
@@ -422,8 +503,17 @@
         align-items: flex-end;
         margin-bottom: floatingSize(60, vw);
 
+        @media (max-width: 680px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
         .block-header {
             margin-right: floatingSize(110, vw);
+
+            @media (max-width: 1200px) {
+                margin: 0 60px;
+            }
         }
 
         .business-development__text {
@@ -441,20 +531,30 @@
     .card:nth-child(2) {
         margin: 0 24px;
     }
+
+    @media (max-width: 1200px){
+        flex-wrap: wrap;
+        justify-content: center;
+
+        .card:not(:last-child) {
+            margin-bottom: floatingSize(60, vw);
+
+        }
+    }
 }
 
 .card {
-    width: floatingSize(350, vw);
-    height: floatingSize(320, vw);
+    width: 350px;
+    height: 320px;
     background: $color-4;
-    padding: floatingSize(32, vw) floatingSize(38, vw);
+    padding: 32px 38px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     .card__text {
         font-family: 'ProximaNova';
-        @include fluidFontSize(14px, 18px, 480, 1920);
+        @include fluidFontSize(16px, 18px, 480, 1920);
         color: $color-white;
         line-height: 115%;
     }
@@ -474,16 +574,28 @@
 
 .information-conteiner {
     padding: floatingSize(120, vw) floatingSize(320, vw);
+
+    @media (max-width: 1200px) {
+        padding: floatingSize(120, vw) floatingSize(180, vw);
+    }
 }
 
 .information {
-    padding: floatingSize(70, vw) floatingSize(160, vw) floatingSize(100, vw);
+    padding: floatingSize(70, vw) floatingSize(140, vw) floatingSize(100, vw) floatingSize(160, vw);
     background: $color-white;
     display: flex;
+
+    @media (max-width: 1100px) {
+        flex-direction: column; 
+    }
 
     .information__header {
         margin-right: 70px;
         min-width: floatingSize(320, vw);
+
+        @media (max-width: 1100px) {
+            margin-bottom: floatingSize(40, vw); 
+        }
     }
 
     .information__text {
@@ -492,6 +604,11 @@
         font-weight: 300;
         color: $color-6;
         margin-bottom: 40px;
+
+        @media (max-width: 1100px) {
+            margin-bottom: floatingSize(40, vw); 
+        }
+
         span {  
             font-weight: 700;
         }

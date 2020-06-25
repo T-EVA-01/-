@@ -26,3 +26,11 @@
 .only-digital:hover {
     color: $color-4;
 }
+
+.block-header {
+    font-family: 'ProximaNova';
+    font-weight: 800;
+    @include fluidFontSize(22px, 28px, 480, 1920);
+    color: $color-black;
+    line-height: 115%;
+}
