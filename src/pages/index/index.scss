@@ -282,18 +282,30 @@
 }
 
 .FDP-pioner-active {
-    animation: FDPpionerAnima 1.8s ease-in-out;
+    animation: FDPpionerAnima 3s ease-in-out;
     animation-fill-mode: forwards;
 }
 
 @keyframes FDPpionerAnima {
     0% {
         opacity: 0;
-        transform: matrix(1, 0, 0, 1, 0, 144.73);
+        transform: matrix(1, 0, 0, 1, 0, 80);
     }
 
-    70% {  
+    30% {  
         transform: matrix(1, 0, 0, 1, 0, -30);
+    }
+
+    50% {  
+        transform: matrix(1, 0, 0, 1, 0, 10);
+    }
+
+    65% {
+        transform: matrix(1, 0, 0, 1, 0, -5);
+    }
+
+    80% {
+        transform: matrix(1, 0, 0, 1, 0, 5);
     }
 
     100% {
@@ -317,7 +329,7 @@
     }
 
     @media (max-width: 1320px) {
-        padding: 0;
+        padding: 0 floatingSize(150, vw);   
     }
 
     @media (max-width: 1020px) {
@@ -348,6 +360,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 
     &__number {
         display: inline-block;
@@ -355,6 +368,7 @@
         font-weight: 800;
         @include fluidFontSize(200px, 250px, 480, 1920);
         color: $color-white;
+        transition: color 1s ease-in-out;
     }
     
     &__text {
@@ -363,11 +377,73 @@
         color: $color-6;
         font-weight: 300;
         @include fluidFontSize(18px, 28px, 480, 1920);
-    
+        transition: color 1s ease-in-out;
+
         span {
             font-weight: 800;
         }
 
+    }
+
+    &__number::after,
+    &__number::before {
+        content: '';
+        width: 20%;
+        height: 3px;
+        background: $color-4;
+        position: absolute;
+        top: -1px;
+        transition: width 0.5s ease-in-out;
+    }
+
+
+    &__number::before {
+        right: 50%;
+    }
+
+    &__number::after {
+        left: 50%;
+    }
+
+    &__first-line::after,
+    &__first-line::before {
+        content: '';
+        width: 20%;
+        height: 3px;
+        background: $color-4;
+        position: absolute;
+        bottom: -1px;
+        transition: width 0.5s ease-in-out;
+    }
+
+
+    &__first-line::before {
+        right: 50%;
+    }
+
+    &__first-line::after {
+        left: 50%;
+    }
+
+    &__second-line::after,
+    &__second-line::before {
+        content: '';
+        width: 3px;
+        height: 0;
+        background: $color-4;
+        position: absolute;
+        bottom: 0px;
+        transition: height 0.5s ease-in-out 0.5s;
+    }
+
+
+    &__second-line::before {
+        right: -1px;
+    }
+
+    &__second-line::after {
+        left: -1px;
+        top: 0;
     }
 
     @media (max-width: 1200px) {
@@ -381,6 +457,37 @@
     }
 
 }
+
+.action:hover {
+    // background: $color-3;
+    
+    .action__number::after,
+    .action__number::before {
+        width: 50%;
+    }
+
+    .action__first-line::after,
+    .action__first-line::before {
+        width: 50%;
+    }
+
+    .action__second-line::after,
+    .action__second-line::before {
+        height: 100%;
+    }
+
+    .action__number {
+        color: $color-4;
+    }
+
+    .action__text {
+        color: $color-black;
+    }
+
+}
+
+
+
 
 .action:nth-child(2) {
     margin: 0 40px;
@@ -399,7 +506,7 @@
 
 }
 
-.footer-actions{
+.footer-actions {
     display: flex;
     padding-left: floatingSize(160, vw);
     margin-top: floatingSize(60, vw);
@@ -410,16 +517,27 @@
         font-weight: 300;
         color: $color-6;
         line-height: 150%;
+        transition: color 0.3s ease-in-out;
 
         span {
             font-family: 'ProximaNova';
             font-weight: 700;
             @include fluidFontSize(22px, 28px, 480, 1920); 
+            transition: color 0.3s ease-in-out;
         }
         
     }
 
 }
+
+.text-is-active {
+
+    color: $color-black;
+
+    span {
+        color: $color-4;
+    }
+} 
 
 .three-actions-button {
     font-size: 12px;
@@ -434,8 +552,34 @@
     cursor: pointer;
     font-family: 'ProximaNova';
     font-weight: 300;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    transition: color 0.5s ease-in-out, font-weight 0.5s ease-in-out;
+
+    .circle {
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        border-radius: 10px;
+        background: $color-4;
+        top: 45%;
+        left: 50%;
+        visibility: hidden;
+        transition: transform 0.4s ease-in-out, visibility 0.4s ease-in-out;
+        z-index: -1;
+    }
 }
 
+.three-actions-button:hover {
+    color: $color-black;
+    font-weight: 800;
+    
+    .circle {
+        transform: matrix(45, 0, 0, 45, 0, 0);
+        visibility: visible;
+    }
+}
 
 
 .business-development-conteiner {

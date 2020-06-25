@@ -2,6 +2,8 @@ const annotationBackgroundImg = document.querySelectorAll('.annotation__backgrou
 const annotationTextGeaderLine = document.querySelectorAll('.annotation-text__header-line');
 const annotationTextConpany = document.querySelector('.annotation-text__text-conpany');
 const services = document.querySelector('.services');
+const threeActionsButton = document.querySelector('.three-actions-button');
+const footerActionsText = document.querySelector('.footer-actions__text')
 
 annotationBackgroundImg[0].classList.add('annotation__background-img-active-opasity');
 
@@ -67,4 +69,13 @@ window.addEventListener('scroll', () => {
     let clientHeight = document.documentElement.clientHeight;
 
     isVisible(clientHeight)
+})
+
+
+threeActionsButton.addEventListener('mouseover', function() {
+    footerActionsText.classList.add('text-is-active');
+})
+
+threeActionsButton.addEventListener('mouseout', function() {
+    footerActionsText.classList.remove('text-is-active');
 })
