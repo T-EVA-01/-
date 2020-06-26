@@ -82,11 +82,9 @@ function isVisible(clientHeight) {
 }
 
 const body = document.querySelector('body');
-console.log('body: ', body);
 
 window.addEventListener('scroll', () => {
     let clientHeight = document.querySelector('body').clientHeight;
-    console.log('clientHeight: ', clientHeight);
 
     isVisible(clientHeight)
 })
