@@ -12,7 +12,7 @@ module.exports = {
     entry: ['@babel/polyfill', './common/js/common.js'],
     output: {
         filename: 'index.js',
-        path: path.resolve(__dirname, 'bild') 
+        path: path.resolve(__dirname, 'build') 
     },
     optimization: {
         splitChunks: {
