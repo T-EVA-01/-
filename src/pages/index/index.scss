@@ -684,7 +684,7 @@
     }
 
     @media (max-width: 600px) {
-        margin-bottom: 0;
+        margin-bottom: 30px;
     }
 
     .block-header {
@@ -693,7 +693,6 @@
         @media (max-width: 1200px) {
             margin: 0 60px;
         }
-
     }
 
     .business-development-top__text {
@@ -741,13 +740,6 @@
         .card:not(:last-child) {
             margin-bottom: floatingSize(60, vw);
     
-        }
-    }
-
-    @media (max-width: 600px){
-    
-        .card:not(:last-child) {
-            margin-bottom: -45px;
         }
     }
 }
