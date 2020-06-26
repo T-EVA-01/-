@@ -33,8 +33,9 @@ block content
                     | Мы берем на себя все организационные вопросы по подключению и дальнейшему 
                     | взаимодействию.
 
-        .three-actions
-            .block-header Вам нужно выполнить только три простых шага
+        .three-actions(data-anima="2")
+            .header-wrapper
+                .block-header Вам нужно выполнить только три простых шага
             .actions
                 .action
                     .action__number 01
@@ -56,14 +57,15 @@ block content
                         | <span>Используйте</span><br>
                         | новые возможности
                     .action__first-line
-                    .action__second-line     
-            .footer-actions           
-                button.three-actions-button Подключить
-                    .circle
-                .footer-actions__text
-                    | Стоимость в год за 1 кассу <br> <span>3000 руб.</span>
+                    .action__second-line
+            .footer-wrapper     
+                .footer-actions           
+                    button.three-actions-button Подключить
+                        .circle
+                    .footer-actions__text
+                        | Стоимость в год за 1 кассу <br> <span>3000 руб.</span>
         
-        .business-development-conteiner
+        .business-development-conteiner(data-anima="3")
             .business-development
                 .business-development-top
                     .block-header Развивайте бизнес
@@ -89,7 +91,7 @@ block content
                                 img(src="./icons/Shape3.png", alt="")
                 
         .information-conteiner
-            .information
+            .information(data-anima="1")
                 .block-header(class = "information__header") Квалифицированная электронная подпись
                 .information__general-position
                     .information__text
