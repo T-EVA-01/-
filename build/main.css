@@ -16,42 +16,42 @@ body {
 
 @font-face {
   font-family: 'ProximaNova';
-  src: url(../bild/fonts/ProximaNova-Light.eot) format("eot"), url(../bild/fonts/ProximaNova-Light.woff) format("woff"), url(../bild/fonts/ProximaNova-Light.ttf) format("truetype");
+  src: url(../build/fonts/ProximaNova-Light.eot) format("eot"), url(../build/fonts/ProximaNova-Light.woff) format("woff"), url(../build/fonts/ProximaNova-Light.ttf) format("truetype");
   font-weight: 300;
   font-style: normal;
   font-stretch: normal; }
 
 @font-face {
   font-family: 'ProximaNova';
-  src: url(../bild/fonts/ProximaNova-Regular.eot) format("eot"), url(../bild/fonts/ProximaNova-Regular.woff) format("woff"), url(../bild/fonts/ProximaNova-Regular.ttf) format("truetype");
+  src: url(../build/fonts/ProximaNova-Regular.eot) format("eot"), url(../build/fonts/ProximaNova-Regular.woff) format("woff"), url(../build/fonts/ProximaNova-Regular.ttf) format("truetype");
   font-weight: 500;
   font-style: normal;
   font-stretch: normal; }
 
 @font-face {
   font-family: 'ProximaNova';
-  src: url(../bild/fonts/ProximaNova-Bold.eot) format("eot"), url(../bild/fonts/ProximaNova-Bold.woff) format("woff"), url(../bild/fonts/ProximaNova-Bold.ttf) format("truetype");
+  src: url(../build/fonts/ProximaNova-Bold.eot) format("eot"), url(../build/fonts/ProximaNova-Bold.woff) format("woff"), url(../build/fonts/ProximaNova-Bold.ttf) format("truetype");
   font-weight: 700;
   font-style: normal;
   font-stretch: normal; }
 
 @font-face {
   font-family: 'ProximaNova';
-  src: url(../bild/fonts/ProximaNova-Extrabld.eot) format("eot"), url(../bild/fonts/ProximaNova-Extrabld.woff) format("woff"), url(../bild/fonts/ProximaNova-Extrabld.ttf) format("truetype");
+  src: url(../build/fonts/ProximaNova-Extrabld.eot) format("eot"), url(../build/fonts/ProximaNova-Extrabld.woff) format("woff"), url(../build/fonts/ProximaNova-Extrabld.ttf) format("truetype");
   font-weight: 800;
   font-style: normal;
   font-stretch: normal; }
 
 @font-face {
   font-family: 'HouschkaPro';
-  src: url(../bild/fonts/HouschkaPro-Light.eot) format("eot"), url(../bild/fonts/HouschkaPro-Light.woff) format("woff"), url(../bild/fonts/HouschkaPro-Light.ttf) format("truetype"), url(../bild/fonts/HouschkaPro-Light.woff2) format("woff2");
+  src: url(../build/fonts/HouschkaPro-Light.eot) format("eot"), url(../build/fonts/HouschkaPro-Light.woff) format("woff"), url(../build/fonts/HouschkaPro-Light.ttf) format("truetype"), url(../build/fonts/HouschkaPro-Light.woff2) format("woff2");
   font-weight: 300;
   font-style: normal;
   font-stretch: normal; }
 
 @font-face {
   font-family: 'HouschkaPro';
-  src: url(../bild/fonts/HouschkaPro-DemiBold.eot) format("eot"), url(../bild/fonts/HouschkaPro-DemiBold.woff) format("woff"), url(../bild/fonts/HouschkaPro-DemiBold.ttf) format("truetype"), url(../bild/fonts/HouschkaPro-DemiBold.woff2) format("woff2");
+  src: url(../build/fonts/HouschkaPro-DemiBold.eot) format("eot"), url(../build/fonts/HouschkaPro-DemiBold.woff) format("woff"), url(../build/fonts/HouschkaPro-DemiBold.ttf) format("truetype"), url(../build/fonts/HouschkaPro-DemiBold.woff2) format("woff2");
   font-weight: 600;
   font-style: normal;
   font-stretch: normal; }

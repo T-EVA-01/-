@@ -32,8 +32,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-            { from: './common/images', to: '../bild/image' },
-            { from: './common/icons', to: '../bild/icons' },
+            { from: './common/images', to: '../build/image' },
+            { from: './common/icons', to: '../build/icons' },
         ]
     })
 
@@ -99,7 +99,7 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             name: '[name].[ext]',
-                            outputPath: '../bild/fonts'
+                            outputPath: '../build/fonts'
                         }
                     }
                 ]
