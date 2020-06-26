@@ -2,6 +2,7 @@
 @import "../../components/window-menu/window-menu.scss";
 @import "../../components/arrow-link/arrow-link.scss";
 @import "../../components/footer/footer.scss";
+@import "../../components/button/button.scss";
 
 
 
@@ -521,9 +522,6 @@
 }
 
 .action:hover {
-    // transform: rotate3d(180,-45,0,-135deg);
-    // animation: Transform3d 1.8s linear;
-    // animation-fill-mode: forwards;
     
     .action__number::after,
     .action__number::before {
@@ -662,47 +660,8 @@
     }
 } 
 
-.three-actions-button {
-    font-size: 12px;
-    width: 13.33em;
-    height: 4.67em;
-    background: $color-3;
-    color: $color-white;
-    text-transform: uppercase;
-    appearance: none;
-    border: 0;
-    border-radius: 0;
-    cursor: pointer;
-    font-family: 'ProximaNova';
-    font-weight: 300;
-    position: relative;
-    overflow: hidden;
-    z-index: 0;
-    transition: color 0.5s ease-in-out, font-weight 0.5s ease-in-out;
+@include button(13.33em, 4.67em, 12px, $color-3, $color-white);
 
-    .circle {
-        position: absolute;
-        width: 5px;
-        height: 5px;
-        border-radius: 10px;
-        background: $color-4;
-        top: 45%;
-        left: 50%;
-        visibility: hidden;
-        transition: transform 0.4s ease-in-out, visibility 0.4s ease-in-out;
-        z-index: -1;
-    }
-}
-
-.three-actions-button:hover {
-    color: $color-black;
-    font-weight: 800;
-    
-    .circle {
-        transform: matrix(45, 0, 0, 45, 0, 0);
-        visibility: visible;
-    }
-}
 
 
 .business-development-conteiner {
@@ -788,7 +747,6 @@
     @media (max-width: 600px){
     
         .card:not(:last-child) {
-            // margin-bottom: floatingSize(-50, vw);
             margin-bottom: -45px;
         }
     }
@@ -919,19 +877,13 @@
 
     }
 
-    .three-actions-button {
-        font-size: 12px;
-        width: 11.666em;
-        height: 4.67em;
-        color: $color-black;
-        background: $color-white;
-        text-transform: uppercase;
-        appearance: none;
+    @include button(11.666em, 4.67em, 12px, $color-white, $color-black);
+
+    .information-button {
         border: 1px solid $color-black;
-        border-radius: 0;
-        cursor: pointer;
-        font-family: 'ProximaNova';
-        font-weight: 300;
+        margin-left: 2px;
+        
     }
 
 }
+

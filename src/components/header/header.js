@@ -1,6 +1,3 @@
-
-// Переменные
-
 const header = document.querySelector('.header');
 const burger = document.querySelector('.burger-button')
 const burgerLine = document.querySelectorAll('.burger__line');
@@ -9,7 +6,8 @@ const MenuLinks = document.querySelector('.menu-links');
 const headerLink = document.querySelector('.header-link');
 const windowMenuFooter = document.querySelector('.menu-footer')
 const windowMenu = document.querySelector('.windows-menu');
-const menu = document.querySelector('.menu'); 
+const menu = document.querySelector('.menu');
+
 
 // Плавное появление header при загрузке страницы
 
@@ -37,6 +35,13 @@ setTimeout(removeAttr, 2200)
 let counter = 0; // Счетчик 
 
 burger.addEventListener('click', () => {
+
+  if (counter === 0) {
+    document.documentElement.style.overflowY = "hidden"
+  } else {
+    document.documentElement.style.overflowY = "scroll"
+  }
+  
 
   burger.classList.toggle('burger_active');
   // burger.classList.toggle('burger-hover');

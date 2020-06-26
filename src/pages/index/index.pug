@@ -1,5 +1,6 @@
 extends ../../layout/layout.pug
 include ../../components/arrow-link/arrow-link.pug
+include ../../components/button/button.pug
 
 block content
 
@@ -60,7 +61,7 @@ block content
                     .action__second-line
             .footer-wrapper     
                 .footer-actions           
-                    button.three-actions-button Подключить
+                    +button('three-actions-button', 'Подключить')
                         .circle
                     .footer-actions__text
                         | Стоимость в год за 1 кассу <br> <span>3000 руб.</span>
@@ -98,5 +99,5 @@ block content
                         | <span>Пионер является сертифицированным удостоверяющим центром</span>
                         | У нас вы можете приобрести КЭП для ФНС и ОФД,
                         | а также электронную подпись любого назначения
-                    button.three-actions-button Купить КЭП
+                    +button('information-button', 'Купить КЭП')
 
