@@ -1,12 +1,14 @@
 const header = document.querySelector('.header');
 const burger = document.querySelector('.burger-button')
 const burgerLine = document.querySelectorAll('.burger__line');
-const logo = document.querySelector('.logo');
+const logo = document.querySelector('.logo-conteiner');
 const MenuLinks = document.querySelector('.menu-links');
 const headerLink = document.querySelector('.header-link');
 const windowMenuFooter = document.querySelector('.menu-footer')
 const windowMenu = document.querySelector('.windows-menu');
 const menu = document.querySelector('.menu');
+const threeActions = document.querySelector('.three-actions');
+const body = document.querySelector('body');
 
 
 // Плавное появление header при загрузке страницы
@@ -16,6 +18,9 @@ setTimeout(function() {
   header.style.transform = "translateY(0)"
 }, 1000)
 
+// setTimeout(function() {
+//   logo.classList.add('logo-is-active')
+// }, 2000)
 
 
 
@@ -35,6 +40,19 @@ setTimeout(removeAttr, 2200)
 let counter = 0; // Счетчик 
 
 burger.addEventListener('click', () => {
+
+  // Анимация логотипа при клики на бургер 
+  let clientHeight = document.querySelector('body').clientHeight;
+  let elem = threeActions.getBoundingClientRect();
+  if (logo.classList.contains('logo-is-active') && counter == 0) {
+    logo.classList.toggle('logo-is-active-remove');
+    logo.classList.toggle('logo-is-active');
+  } else if (counter == 1 && elem.top < 0 && elem.top < clientHeight) {
+      setTimeout(function() {
+        logo.classList.toggle('logo-is-active');
+        logo.classList.toggle('logo-is-active-remove');
+      }, 2100)
+  }
 
   if (counter === 0) {
     document.documentElement.style.overflowY = "hidden"
@@ -98,4 +116,36 @@ burger.addEventListener('click', () => {
     counter--;
 
   }
+})
+
+
+// Анимация логотипа
+
+function logoActive(clientHeight) {     
+  let elem = threeActions.getBoundingClientRect();
+
+  if (elem.top < 0 && elem.top < clientHeight) {
+    logo.classList.remove('logo-is-active-remove');
+    logo.classList.add('logo-is-active');
+  } else if (elem.top > 0 && elem.top < clientHeight && logo.classList.contains('logo-is-active')) {
+    logo.classList.add('logo-is-active-remove');
+    logo.classList.remove('logo-is-active');
+  }
+  console.log(elem.top);
+  console.log(clientHeight);
+}
+
+
+
+window.addEventListener('scroll', () => {
+  let clientHeight = document.querySelector('body').clientHeight;
+  let clientWidth = document.querySelector('body').clientWidth;
+
+  if (clientWidth >= 1200 ) {
+    logoActive(clientHeight)
+  } else {
+    logo.classList.remove('logo-is-active');
+    logo.classList.remove('logo-is-active-remove');
+  }
+  
 })

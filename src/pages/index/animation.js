@@ -1,3 +1,5 @@
+import '../../components/header/header.js';
+
 const annotationBackgroundImg = document.querySelectorAll('.annotation__background-img');
 const annotationTextGeaderLine = document.querySelectorAll('.annotation-text__header-line');
 const annotationTextConpany = document.querySelector('.annotation-text__text-conpany');
@@ -9,7 +11,8 @@ const headerWrapper = document.querySelector('.header-wrapper');
 const footerWrapper = document.querySelector('.footer-wrapper');
 const businessDevelopmentTop = document.querySelector('.business-development-top');
 const businessDevelopmentCards = document.querySelector('.business-development-cards');
- 
+const body = document.querySelector('body');
+
 annotationBackgroundImg[0].classList.add('annotation__background-img-active-opasity');
 
 setTimeout(function() {
@@ -81,7 +84,6 @@ function isVisible(clientHeight) {
     }
 }
 
-const body = document.querySelector('body');
 
 window.addEventListener('scroll', () => {
     let clientHeight = document.querySelector('body').clientHeight;

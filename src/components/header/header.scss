@@ -21,6 +21,7 @@
 
 }
 
+
 .logo {
     width: 240px;
     height: 120px;
@@ -28,6 +29,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    .logo__img:nth-child(1) {
+        position: absolute;
+        opacity: 1;
+    }
+
+
+    .logo__img:nth-child(2) {
+        opacity: 0;
+        position: absolute;
+    }
 
     @media (max-width: 1200px) {
         width: 180px;
@@ -47,6 +59,132 @@
         }
     }
 
+}
+
+.logo-is-active {
+    animation: logoContAnima 1s ease-in-out;
+    animation-fill-mode: forwards;
+
+    .logo {
+        animation: logoWidth 0.8s ease-in-out 0.8s;
+        animation-fill-mode: forwards;
+
+        .logo__img:nth-child(1) {
+            animation: logoAnimaOne 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+
+        .logo__img:nth-child(2) {
+            animation: logoAnimaTwo 0.5s ease-in-out 1.4s;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+@keyframes logoContAnima {
+    0% {
+        margin-left: floatingSize(236, vw);
+    }
+
+    60% {
+        margin-left: floatingSize(270, vw);
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+
+@keyframes logoAnimaOne{
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes logoAnimaTwo{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes logoWidth {
+    0% {
+        width: 240px;
+    }
+
+    50% {
+        width: 80px;
+    }
+    
+    75% {
+        width: 140px;
+    }
+
+    100% {
+        width: 120px;
+    }
+}
+
+.logo-is-active-remove {
+    animation: logoContAnimaRemove 1s ease-in-out;
+    animation-fill-mode: forwards;
+
+    .logo {
+        animation: logoWidthRemove 0.8s ease-in-out;
+        animation-fill-mode: forwards;
+
+        .logo__img:nth-child(2) {
+            animation: logoAnimaOne 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+
+        .logo__img:nth-child(1) {
+            animation: logoAnimaTwoRemove 1.5s ease-in-out;
+            animation-fill-mode: forwards;
+        }
+    }
+}
+
+@keyframes logoContAnimaRemove {
+    0% {
+        margin-left: 0;
+    }
+
+    100% {
+        margin-left: floatingSize(236, vw);
+    }
+}
+
+@keyframes logoWidthRemove {
+    0% {
+        width: 120px;
+    }
+
+    100% {
+        width: 240px;
+    }
+}
+
+@keyframes logoAnimaTwoRemove {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .header-link {
