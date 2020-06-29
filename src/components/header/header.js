@@ -43,15 +43,16 @@ burger.addEventListener('click', () => {
 
   // Анимация логотипа при клики на бургер 
   let clientHeight = document.querySelector('body').clientHeight;
+  let clientWidth = document.querySelector('body').clientWidth;
   let elem = threeActions.getBoundingClientRect();
-  if (logo.classList.contains('logo-is-active') && counter == 0) {
+  if (logo.classList.contains('logo-is-active') && counter == 0 && clientWidth >= 1200) {
     logo.classList.toggle('logo-is-active-remove');
     logo.classList.toggle('logo-is-active');
-  } else if (counter == 1 && elem.top < 0 && elem.top < clientHeight) {
+  } else if (counter == 1 && elem.top < 0 && elem.top < clientHeight && clientWidth >= 1200) {
       setTimeout(function() {
         logo.classList.toggle('logo-is-active');
         logo.classList.toggle('logo-is-active-remove');
-      }, 2100)
+      }, 2000)
   }
 
   if (counter === 0) {
