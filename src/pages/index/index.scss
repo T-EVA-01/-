@@ -747,7 +747,7 @@
 .cards-active  {
 
     .card {
-        animation: cardActive 1.5s ease-in-out;
+        animation: cardActive 3.5s ease-in-out;
         animation-fill-mode: forwards;
     }
 
@@ -769,17 +769,61 @@
         opacity: 0;
     }
 
-    60% {
+    40% {
         transform: translate3d(0, 0, 5px);
     }
 
-    80% {
+    53% {
         transform: translate3d(0, 0, -2px);
     }
 
-    100% {
+    66% {
         transform: translate3d(0, 0, 0);
         opacity: 1;
+    }
+
+    82% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    84% {
+        transform: translate3d(0, 0, 5px);
+    }
+    
+    88% {
+        transform: translate3d(0, 0, 5px);
+    }
+
+    92% {
+        transform: translate3d(0, 0, 0px);
+    }
+
+    96% {
+        transform: translate3d(0, 0, 5px);
+    }
+
+    98% {
+        transform: translate3d(0, 0, 5px);
+    }
+
+
+    100% {
+        transform: translate3d(0, 0, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes cardActive-two {
+    0% {
+        transform: translate3d(0, 0, 10px);
+    }
+    
+    60% {
+        transform: translate3d(0, 0, 10px);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0px);
     }
 }
 
