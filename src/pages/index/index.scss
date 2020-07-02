@@ -884,17 +884,12 @@
 .equipment {
     padding: 55px floatingSize(240, vw) 61px floatingSize(180, vw);
     display: flex;
-    transition: background-color 1s ease-in-out;
+    transition: background-color 2s ease-out;
+    background-color: $color-5;
     
 }
 
 .equipment-active {
-
-    .equipment__img {
-        // animation: AnimaImg 3s ease-in-out;
-        // animation-fill-mode: forwards;
-        
-    }
     
     .equipment__information {
 
@@ -939,59 +934,6 @@
     }
 
 }
-
-// .equipment-media-active {
-  
-//     .equipment__information {
-
-//         .top-text {
-//             transform: translateY(0px);
-//             opacity: 1;
-//             transition-delay: 0s;
-//         }
-    
-//         .equipment__header {
-//             transform: translateY(0px);
-//             opacity: 1;
-//             transition-delay: 0.1s;
-//         }
-
-//         .pioner-is {
-
-//             &__header {
-//                 transform: translateY(0px);
-//                 opacity: 1; 
-//                 transition-delay: 0.2s;
-//             }
-
-//             &__items {
-//                 transform: translateY(0px);
-//                 opacity: 1; 
-//                 transition-delay: 0.3s;
-//             }
-
-//             &__line {
-//                 transform: translateY(0px);
-//                 opacity: 1; 
-//                 transition-delay: 0.4s;
-//             }
-//         }
-        
-//         .footer-equipment {
-//             transform: translateY(0px);
-//             opacity: 1;
-//             transition-delay: 0.5s;
-//         }
-
-//         .equipment__bottom-text {
-//             transform: translateY(0px);
-//             opacity: 1;
-//             transition-delay: 0.6s;
-//         }
-
-//     }
-
-// }
 
 @keyframes AnimaImg {
 
