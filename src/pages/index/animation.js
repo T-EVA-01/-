@@ -78,6 +78,9 @@ function isVisible(clientHeight) {
                 case 3:
                     businessDevelopmentTop.classList.add('bd-top-active');
                     businessDevelopmentCards.classList.add('cards-active');
+                    // businessDevelopmentCards.addEventListener('animationend', function(e) {
+                    //     businessDevelopmentCards.classList.add('cards-active-two');
+                    // }, false)
                     break
             }   
         }
