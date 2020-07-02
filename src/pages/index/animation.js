@@ -12,6 +12,9 @@ const footerWrapper = document.querySelector('.footer-wrapper');
 const businessDevelopmentTop = document.querySelector('.business-development-top');
 const businessDevelopmentCards = document.querySelector('.business-development-cards');
 const body = document.querySelector('body');
+const equipment = document.querySelector('.equipment');
+const equipmentImg = document.querySelector('.equipment__img')
+
 
 annotationBackgroundImg[0].classList.add('annotation__background-img-active-opasity');
 
@@ -79,6 +82,23 @@ function isVisible(clientHeight) {
                     businessDevelopmentTop.classList.add('bd-top-active');
                     businessDevelopmentCards.classList.add('cards-active');
                     break
+                case 4:
+                    if (body.clientWidth <= 1000) {
+                        equipment.classList.add('equipment-active');
+                        setTimeout(function() {
+                            equipment.style.backgroundColor = "#ffc107";
+                        }, 1100)
+                    } else {
+                        equipmentImg.style.animation = 'AnimaImg 3s ease-in-out';
+                        equipmentImg.style.animationFillMode = 'forwards';
+                        setTimeout(function() {
+                            equipment.classList.add('equipment-active');
+                        }, 3000)
+                        setTimeout(function() {
+                            equipment.style.backgroundColor = "#ffc107";
+                        }, 4100)
+                    }
+                    break
             }   
         }
     }
@@ -101,7 +121,5 @@ threeActionsButton.addEventListener('mouseover', function() {
 threeActionsButton.addEventListener('mouseout', function() {
     footerActionsText.classList.remove('text-is-active');
 })
-
-
 
 

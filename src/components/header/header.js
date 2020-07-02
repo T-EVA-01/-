@@ -132,8 +132,6 @@ function logoActive(clientHeight) {
     logo.classList.add('logo-is-active-remove');
     logo.classList.remove('logo-is-active');
   }
-  console.log(elem.top);
-  console.log(clientHeight);
 }
 
 

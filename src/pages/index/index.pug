@@ -62,7 +62,6 @@ block content
             .footer-wrapper     
                 .footer-actions           
                     +button('three-actions-button', 'Подключить')
-                        .circle
                     .footer-actions__text
                         | Стоимость в год за 1 кассу <br> <span>3000 руб.</span>
         
@@ -101,3 +100,31 @@ block content
                         | а также электронную подпись любого назначения
                     +button('information-button', 'Купить КЭП')
 
+    .equipment(data-anima="4")
+        img(src="./image/equipment.png", alt="", class="equipment__img")
+        .equipment__information
+            .top-text кaссовое оборудование 
+            .equipment__header Замените классы на новые
+            .pioner-is 
+                .pioner-is__header Пионер 114Ф - мобильная и простая в использовании онлайн-касса
+                .pioner-is__items 
+                    .pioner-is-item
+                        .pioner-is-item__conteiner-img
+                            img(src="./image/briefcase.png", alt="", class='pioner-is-item__img')
+                        .pioner-is-item__text Идеальное решение для разъездной торговли
+                    .pioner-is-item
+                        .pioner-is-item__conteiner-img
+                            img(src="./image/flag.png", alt="", class='pioner-is-item__img')
+                        .pioner-is-item__text Первая онлайн-касса с сенсорным дисплеем
+                    .pioner-is-item
+                        .pioner-is-item__conteiner-img
+                            img(src="./image/thumbs-up.png", alt="", class='pioner-is-item__img')
+                        .pioner-is-item__text Собственное ПО, совместимость со всеми популярными программами 
+                .pioner-is__line
+            .footer-equipment
+                +button('footer-equipment__button', 'купить кассу')
+                .footer-equipment__text
+                    | Стоимость <br> <span>19 000 руб.</span>
+            .equipment__bottom-text
+                | У нас вы также можете приобрести <br>
+                | другие виды <a href='#'>кассового оборудования<a>
