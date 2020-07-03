@@ -1157,3 +1157,147 @@
     }
 
 }
+
+
+
+.opportunities {
+    // display: flex;
+    // justify-content: center;
+    // flex-direction: column;
+    padding: floatingSize(120, vw) floatingSize(240, vw);
+}
+
+.row-opportunities {
+    position: relative;
+    height: floatingSize(480, vw);
+
+
+
+    .row-opportunities__image-conteiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $color-5;
+        width: floatingSize(640, vw);
+        height: floatingSize(480, vw);
+        position: absolute;
+        z-index: $zIndexForward-01;
+
+        @media (max-width: 1000px) {
+            display: none;
+        }
+
+        .row-opportunities__image {
+            width: floatingSize(440, vw);
+        }
+
+
+    }
+}
+
+.row-opportunities:nth-child(1) {
+    margin-bottom: floatingSize(120, vw);
+
+    @media (max-width: 820px) {
+        margin-bottom: 100px;
+    }
+
+    .row-opportunities__image-conteiner {
+        right: 0;
+        top: 0;
+    }
+}
+
+.row-opportunities:nth-child(2) {
+
+    @media (max-width: 820px) {
+        margin-bottom: 100px;
+    }
+
+    .row-opportunities__image-conteiner {
+        left: 0;
+        top: 0;
+    }
+
+    .text-content {
+        margin-left: floatingSize(720, vw);
+
+        @media (max-width: 820px) {
+            margin-left: 0;
+        }
+
+        .text-content__discription  {
+            transform: translateX(-(floatingSize(320, vw)));
+            width: floatingSize(1300, vw);
+
+            @media (max-width: 820px) {
+                transform: translateX(0);
+            }
+
+            .text-content__discription-item {
+                line-height: 130%;
+            }
+        }
+    }
+}
+
+.text-content {
+    .text-content__header {
+        font-style: 'ProximaNova';
+        font-weight: 700;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: $color-4;
+        margin-left: floatingSize(80, vw);
+
+    }
+
+    .text-content__discription {
+        font-style: 'ProximaNova';
+        font-weight: 800;
+        @include fluidFontSize(18px, 55px, 480, 1920);
+        text-transform: uppercase;
+        margin-top: floatingSize(30, vw);
+
+
+        @media (max-width: 1060px) {
+            @include fluidFontSize(20px, 40px, 480, 1920);
+        }
+
+        @media (max-width: 570px) {
+            @include fluidFontSize(15px, 30px, 480, 1920);
+        }
+    }
+
+    .text-content__possibility {
+        max-width: floatingSize(480, vw);
+        min-width: 400px;
+        font-family: 'HouschkaPro';
+        font-weight: 300;
+        @include fluidFontSize(12px, 18px, 480, 1920);
+        margin-left: floatingSize(80, vw);
+        margin-top: floatingSize(30, vw);
+
+        @media (max-width: 600px) {
+            min-width: 300px;
+        }
+    }
+
+    @include button(13.33em, 4.67em, 12px, none, $color-black);
+
+    .text-content__button {
+        border: 1px solid $color-black;
+        margin-top: floatingSize(55, vw);
+        margin-left: floatingSize(80, vw);
+    }
+}
+
+.text-content:nth-child(2) {
+    .text-content__button {
+        width: 18.75em;
+
+        // .circle {
+        //     transform: matrix(50, 0, 0, 50, 0, 0);
+        // }
+    }
+}
