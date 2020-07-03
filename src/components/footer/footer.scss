@@ -2,6 +2,7 @@
     padding: floatingSize(60, vw) floatingSize(480, vw);
     display: flex;
 
+    
     @media (max-width: 1200px) {
         padding: floatingSize(60, vw) floatingSize(400, vw);
         justify-content: space-between;
@@ -23,19 +24,22 @@
             justify-content: space-between;
             width: 100%;
         }
+
     
         .footer-column:not(:last-child) {
             margin-bottom: 20px;
+            width: 100%; 
         }
     
         .footer-column:nth-child(1) {
+
             .footer-links {
                 min-width: 200px;
                 transform: translateX(35px);
             }
         }
     
-        .footer-column:nth-child(2) {
+        .footer-column:nth-child(2) { 
             .footer-links {
                 transform: translateX(-45px);
                 min-width: 120px;
@@ -52,7 +56,6 @@
 .footer-column:not(:last-child) {
     width: floatingSize(360, vw);
 }
-
 
 
 .footer-contact {

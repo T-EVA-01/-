@@ -770,7 +770,8 @@ body {
                 justify-content: space-between;
         width: 100%; }
       .footer .footer-column:not(:last-child) {
-        margin-bottom: 20px; }
+        margin-bottom: 20px;
+        width: 100%; }
       .footer .footer-column:nth-child(1) .footer-links {
         min-width: 200px;
         -webkit-transform: translateX(35px);
