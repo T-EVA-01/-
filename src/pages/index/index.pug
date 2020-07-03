@@ -4,7 +4,7 @@ include ../../components/button/button.pug
 
 block content
 
-    .annotation
+    //- .annotation
         img(src="./image/Layer42.png", alt="").annotation__background-img
         img(src="./image/Layer3.png", alt="").annotation__background-img
         img(src="./image/Layer43.png", alt="").annotation__background-img
@@ -23,7 +23,7 @@ block content
             .services-item 
                 .services-item__text Сервис
 
-    .FDP-pioner-wrapper
+    //- .FDP-pioner-wrapper
 
         .FDP-conteiner
             .FDP-pioner(data-anima="1")
@@ -100,7 +100,7 @@ block content
                         | а также электронную подпись любого назначения
                     +button('information-button', 'Купить КЭП')
 
-    .equipment(data-anima="4")
+    //- .equipment(data-anima="4")
         img(src="./image/equipment.png", alt="", class="equipment__img")
         .equipment__information
             .top-text кaссовое оборудование 
@@ -129,32 +129,33 @@ block content
                 | У нас вы также можете приобрести <br>
                 | другие виды <a href='#'>кассового оборудования</a>
     
-    .opportunities-conteiner
-        .opportunities
-            .row-opportunities(class='maintenance')
-                .text-content
-                    .text-content__header центр технического обслуживания 
-                    .text-content__discription 
-                        .text-content__discription-item Настраивайте модернизи-
-                        .text-content__discription-item руйте и ремонтируйте
-                    .text-content__possibility
-                        | Обратившись к нашим партнерам, вы сможете получить
-                        | квалифицированный сервис: произвести настройку ККТ,
-                        | производить ежегодное обновление оборудования и ЭЦП,
-                        | получить консультацию и другие виды услуг.
-                    +button('text-content__button', 'выбрать цто')
-                .row-opportunities__image-conteiner
-                    img(src="./image/Map.png", alt="", class='row-opportunities__image')
-            .row-opportunities(class='knowledge-base')
-                .row-opportunities__image-conteiner
-                    img(src="./image/rybuf.png", alt="", class='row-opportunities__image')
-                .text-content
-                    .text-content__header база знаний
-                    .text-content__discription 
-                        .text-content__discription-item Получайте актуальную,
-                        .text-content__discription-item Проверенную информацию
-                    .text-content__possibility
-                        | На сайте также собрана обширная база знаний,
-                        | где вы сможете получить ответы на технические,
-                        | юридические и организационные вопросы.
-                    +button('text-content__button', 'перейти к базе знаний')
+
+
+    .opportunities
+        .row-opportunities(class='maintenance')
+            .text-content
+                .text-content__header центр технического обслуживания 
+                .text-content__discription 
+                    .text-content__discription-item Настраивайте модернизи-
+                    .text-content__discription-item руйте и ремонтируйте
+                .text-content__possibility
+                    | Обратившись к нашим партнерам, вы сможете получить
+                    | квалифицированный сервис: произвести настройку ККТ,
+                    | производить ежегодное обновление оборудования и ЭЦП,
+                    | получить консультацию и другие виды услуг.
+                +button('text-content__button', 'выбрать цто')
+            .row-opportunities__image-conteiner
+                img(src="./image/Map.png", alt="", class='row-opportunities__image')
+        .row-opportunities(class='knowledge-base')
+            .row-opportunities__image-conteiner
+                img(src="./image/rybuf.png", alt="", class='row-opportunities__image')
+            .text-content
+                .text-content__header база знаний
+                .text-content__discription 
+                    .text-content__discription-item Получайте актуальную,
+                    .text-content__discription-item Проверенную информацию
+                .text-content__possibility
+                    | На сайте также собрана обширная база знаний,
+                    | где вы сможете получить ответы на технические,
+                    | юридические и организационные вопросы.
+                +button('text-content__button', 'перейти к базе знаний')

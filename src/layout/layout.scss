@@ -1,6 +1,7 @@
 
 :root {
     box-sizing: border-box;
+    width: calc(100vw + 20px);
 }
 
 *,
@@ -12,4 +13,5 @@
 
 body {
     font-family: 'ProximaNova', 'HouschkaPro', sans-serif;
+    
 }

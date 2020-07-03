@@ -14,7 +14,10 @@ const businessDevelopmentCards = document.querySelector('.business-development-c
 const body = document.querySelector('body');
 const equipment = document.querySelector('.equipment');
 const equipmentImg = document.querySelector('.equipment__img')
+const opportunities = document.querySelector('.opportunities');
 
+
+/*
 
 annotationBackgroundImg[0].classList.add('annotation__background-img-active-opasity');
 
@@ -123,3 +126,12 @@ threeActionsButton.addEventListener('mouseout', function() {
 })
 
 
+
+
+*/
+
+
+
+//test
+
+opportunities.classList.add('opportunities-active')
