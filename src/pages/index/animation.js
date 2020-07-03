@@ -17,7 +17,6 @@ const equipmentImg = document.querySelector('.equipment__img')
 const opportunities = document.querySelector('.opportunities');
 
 
-/*
 
 annotationBackgroundImg[0].classList.add('annotation__background-img-active-opasity');
 
@@ -128,7 +127,7 @@ threeActionsButton.addEventListener('mouseout', function() {
 
 
 
-*/
+
 
 
 
