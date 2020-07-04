@@ -101,6 +101,9 @@ function isVisible(clientHeight) {
                         }, 4100)
                     }
                     break
+                case 5: 
+                    opportunities.classList.add('opportunities-active');
+                    break      
             }   
         }
     }
@@ -128,9 +131,3 @@ threeActionsButton.addEventListener('mouseout', function() {
 
 
 
-
-
-
-//test
-
-opportunities.classList.add('opportunities-active')

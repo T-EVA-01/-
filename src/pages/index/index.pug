@@ -100,14 +100,14 @@ block content
                         | а также электронную подпись любого назначения
                     +button('information-button', 'Купить КЭП')
 
-    .equipment(data-anima="4")
+    .equipment
         img(src="./image/equipment.png", alt="", class="equipment__img")
         .equipment__information
             .top-text кaссовое оборудование 
             .equipment__header Замените классы на новые
             .pioner-is 
                 .pioner-is__header Пионер 114Ф - мобильная и простая в использовании онлайн-касса
-                .pioner-is__items 
+                .pioner-is__items
                     .pioner-is-item
                         .pioner-is-item__conteiner-img
                             img(src="./image/briefcase.png", alt="", class='pioner-is-item__img')
@@ -125,14 +125,14 @@ block content
                 +button('footer-equipment__button', 'купить кассу')
                 .footer-equipment__text
                     | Стоимость <br> <span>19 000 руб.</span>
-            .equipment__bottom-text
+            .equipment__bottom-text(data-anima="4")
                 | У нас вы также можете приобрести <br>
                 | другие виды <a href='#'>кассового оборудования</a>
     
 
 
     .opportunities
-        .row-opportunities(class='maintenance')
+        .row-opportunities(class='maintenance' data-anima="5")
             .text-content
                 .text-content__header центр технического обслуживания 
                 .text-content__discription 
