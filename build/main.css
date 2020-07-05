@@ -2883,7 +2883,7 @@ body {
             transform-origin: right center;
     opacity: 0; }
     .become-partner .become-partner__button .circle {
-      background: rgba(0, 0, 0, 0.7); }
+      background: rgba(0, 0, 0, 0.5); }
   .become-partner .button:hover {
     color: #ffffff;
     font-weight: 800; }
