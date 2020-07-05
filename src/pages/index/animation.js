@@ -15,7 +15,7 @@ const body = document.querySelector('body');
 const equipment = document.querySelector('.equipment');
 const equipmentImg = document.querySelector('.equipment__img')
 const opportunities = document.querySelector('.opportunities');
-
+const becomePartner = document.querySelector('.become-partner');
 
 
 annotationBackgroundImg[0].classList.add('annotation__background-img-active-opasity');
@@ -103,10 +103,21 @@ function isVisible(clientHeight) {
                     break
                 case 5: 
                     opportunities.classList.add('opportunities-active');
-                    break      
+                    break  
+                case 6: 
+                    if (body.clientWidth > 1000 && !becomePartner.classList.contains('become-partner-adaptive')) {
+                        becomePartner.classList.add('become-partner-active'); 
+                    }
+                    break   
             }   
         }
     }
+}
+
+
+
+if (body.clientWidth < 1000) {
+    becomePartner.classList.add('become-partner-adaptive');
 }
 
 
@@ -127,6 +138,11 @@ threeActionsButton.addEventListener('mouseout', function() {
     footerActionsText.classList.remove('text-is-active');
 })
 
+
+
+
+
+//test
 
 
 

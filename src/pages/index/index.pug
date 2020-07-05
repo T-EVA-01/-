@@ -153,9 +153,36 @@ block content
                 .text-content__header база знаний
                 .text-content__discription 
                     .text-content__discription-item Получайте актуальную,
-                    .text-content__discription-item Проверенную информацию
+                    .text-content__discription-item проверенную информацию
                 .text-content__possibility
                     | На сайте также собрана обширная база знаний,
                     | где вы сможете получить ответы на технические,
                     | юридические и организационные вопросы.
                 +button('text-content__button', 'перейти к базе знаний')
+
+    .become-partner-conteiner(data-anima="6")
+        .become-partner
+            img(src="./image/Layer41.jpg", alt="", class="become-partner__background")
+            .become-partner__header партнерская программа пионер
+            .become-partner__second-header Станьте нашим партнером 
+            .become-partner__text Привлекайте больше клиентов с нашей партнерской программой
+            .become-partner__items 
+                .become-partner-item
+                    .become-partner-item__conteiner-img
+                        img(src="./image/edit.png", alt="", class='become-partner-item__img')
+                    .become-partner-item__text Быстрое и удобное заключение договора
+                .become-partner-item
+                    .become-partner-item__conteiner-img
+                        img(src="./image/log-in.png", alt="", class='become-partner-item__img')
+                    .become-partner-item__text Удобный личный кабинет, дополнительные сервисы
+                .become-partner-item
+                    .become-partner-item__conteiner-img
+                        img(src="./image/percent.png", alt="", class='become-partner-item__img')
+                    .become-partner-item__text Выгодные условия сотрудничества, клиентская комиссия до 30%
+                .become-partner-item
+                    .become-partner-item__conteiner-img
+                        img(src="./image/users.png", alt="", class='become-partner-item__img')
+                    .become-partner-item__text 
+                        | Помощь в получении лицензии на выдачи КЭП,
+                        | консуьтации и обучение, полная документация 
+            +button('become-partner__button', 'стать партнером')
